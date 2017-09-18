@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title><%= title %></title>
+<!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/stylesheets/style.css">
+  </head>
+  <body>
+<header>
+
+
+
+
+    <div class="links-nav">
+      <%  if (currentUser) { %>
+          <a href="/"> Home </a>
+
+          <a href="/user-topics"> My topics </a>
+
+
+      <div class="logout">
+          <a class="btn btn-default" href="/logout"> Log Out </a>
+      </div>
+
+
+      <%  }  %>
+    </div>
+
+
+
+
+
+
+
+  <!-- <%  if (!currentUser) {  %>
+    <a href="/login"> Log In </a>
+    <br />
+    <a href="/signup"> Sign Up </a>
+    <br />
+  <%  }  %> -->
+
+  </nav>
+
+</header>
+
+    <%- body %>
+
+    <footer>
+      <p> contact address number  </p>
+    </footer>
+
+  </body>
+</html>

@@ -1,0 +1,37 @@
+
+
+<div class="topics">
+
+          <div class="create">
+            <a class="btn btn-default" href="/topics/new"> Create a Topic </a>
+          </div>
+
+
+  <% if (currentUser) { %>
+  <h2> Welcome, <%= currentUser.name %>! </h2>
+  <% }  %>
+
+<div >
+  <ul>
+
+    <%  listOfTopics.forEach((oneTopic) => {  %>
+        <li class="topic-list">
+          <a href="/topics/<%= oneTopic._id %>"> <%= oneTopic.topic %> </a>
+          <p> <%= oneTopic.description %> </p>
+        </li>
+
+      <a class="glyphicon glyphicon-trash" href="/topics/<%= oneTopic._id %>/delete"> </a>
+      <br>
+      <br>
+
+    <%  });   %>
+
+  </ul>
+</div>
+
+
+
+
+
+  </form>
+</div>

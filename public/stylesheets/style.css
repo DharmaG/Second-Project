@@ -1,0 +1,65 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url(../images/homepage-background-2.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  color: white;
+  font-weight: bold;
+
+}
+
+a {
+  color: #6472A1;
+  text-decoration: none;
+  display: inline;
+
+}
+
+.topics {
+  background-color:rgba(10, 55, 115, .5);
+  margin: 5% auto;
+  padding: 2%;
+  width: 80%;
+}
+
+.topic-list {
+  list-style: none;
+}
+
+.home {
+  float: right;
+  margin-top: -25%;
+}
+
+.title {
+  margin-top: 15%;
+  text-align: center;
+  font-size: 80px;
+}
+
+.description {
+  font-size: 30px;
+}
+
+.signup {
+  text-align: center;
+  border-radius: 10px;
+  background-color: rgba(10, 55, 115, .5);
+  margin: 15% 35%;
+  padding: 5%;
+}
+
+.logout {
+  float: right;
+}
+
+.create {
+  float: right;
+
+}
+
+footer {
+  text-align: center;
+  margin-bottom: -30%;
+}
