@@ -1,6 +1,7 @@
+<body class="user-body">
 
 <div class="navigation">
-    <a class="topic-link" href="/user-topics"> My topics </a>
+
 
     <form class="form-horizontal search" method="get" action="/topic/search-results" >
       <div class="form-group form-group-lg">
@@ -15,43 +16,51 @@
 </div>
 
 
-<div class="topics">
 
 
+<div class="background-color">
   <% if (currentUser) { %>
   <h2> Welcome, <%= currentUser.name %>! </h2>
   <% }  %>
 
-<div >
-
-  <ul>
-
-<div class="topic-box">
-
-    <a href="/topics/new"> Create Topics  </a>
-
-  <%  listOfTopics.forEach((oneTopic) => {  %>
-      <li class="topic-list">
-        <a  class="oneTopic" href="/topics/<%= oneTopic._id %>"> <%= oneTopic.topic %> </a>
-        <p> <%= oneTopic.description %> </p>
-        <a class="glyphicon glyphicon-trash" href="/topics/<%= oneTopic._id %>/delete"> </a>
-        <a  href="/topics/<%= oneTopic._id %>/edit"> Edit </a>
-        <br>
-        <br>
-      </li>
+  <div class="topics">
 
 
 
-  <%  });   %>
+
+  <div >
+
+    <ul>
+
+  <div class="topic-box">
+
+      <a class="glyphicon glyphicon-plus" href="/topics/new"> Create Topics  </a>
+
+    <%  listOfTopics.forEach((oneTopic) => {  %>
+        <li class="topic-list">
+          <a  class="oneTopic" href="/topics/<%= oneTopic._id %>"> <%= oneTopic.topic %> </a>
+          <p> <%= oneTopic.description %> </p>
+          <a class="glyphicon glyphicon-trash" href="/topics/<%= oneTopic._id %>/delete"> </a>
+          <a  href="/topics/<%= oneTopic._id %>/edit"> Edit </a>
+          <br>
+          <br>
+        </li>
+
+
+
+    <%  });   %>
+  </div>
+
+
+    </ul>
+  </div>
+
+
+
+
+
+    </form>
+  </div>
+
 </div>
-
-
-  </ul>
-</div>
-
-
-
-
-
-  </form>
-</div>
+</body>
