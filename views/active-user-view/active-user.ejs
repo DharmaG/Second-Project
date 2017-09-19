@@ -1,10 +1,21 @@
 
+<div class="navigation">
+    <a class="topic-link" href="/user-topics"> My topics </a>
+
+    <form class="form-horizontal search" method="get" action="/topic/search-results" >
+      <div class="form-group form-group-lg">
+        <label for="term-input"> </label>
+        <input  class="col-sm-2 control-label input" id="term-input" name="searchTerm" type="search" >
+          <button class="btn btn-default glyphicon glyphicon-search new"> </button>
+
+  <div class="logout">
+      <a class=" glyphicon glyphicon-log-out log-out" href="/logout"> </a>
+  </div>
+
+</div>
+
 
 <div class="topics">
-
-          <div class="create">
-            <a class="btn btn-default" href="/topics/new"> Create a Topic </a>
-          </div>
 
 
   <% if (currentUser) { %>
@@ -12,19 +23,28 @@
   <% }  %>
 
 <div >
+
   <ul>
 
-    <%  listOfTopics.forEach((oneTopic) => {  %>
-        <li class="topic-list">
-          <a href="/topics/<%= oneTopic._id %>"> <%= oneTopic.topic %> </a>
-          <p> <%= oneTopic.description %> </p>
-        </li>
+<div class="topic-box">
 
-      <a class="glyphicon glyphicon-trash" href="/topics/<%= oneTopic._id %>/delete"> </a>
-      <br>
-      <br>
+    <a href="/topics/new"> Create Topics  </a>
 
-    <%  });   %>
+  <%  listOfTopics.forEach((oneTopic) => {  %>
+      <li class="topic-list">
+        <a  class="oneTopic" href="/topics/<%= oneTopic._id %>"> <%= oneTopic.topic %> </a>
+        <p> <%= oneTopic.description %> </p>
+        <a class="glyphicon glyphicon-trash" href="/topics/<%= oneTopic._id %>/delete"> </a>
+        <a  href="/topics/<%= oneTopic._id %>/edit"> Edit </a>
+        <br>
+        <br>
+      </li>
+
+
+
+  <%  });   %>
+</div>
+
 
   </ul>
 </div>

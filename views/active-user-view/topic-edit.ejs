@@ -1,4 +1,3 @@
-
 <div class="navigation">
     <a class="topic-link" href="/user-topics"> My topics </a>
 
@@ -15,11 +14,21 @@
 </div>
 
 <div class="topic-box">
-  <div class="topics">
-    <h2> Topic Information </h2>
 
-    <h3> <%= topicInfo.description %> </h3>
+  <h2> Edit Topic </h2>
 
-    <h3> <%= topicInfo.steps %> </h3>
-  </div>
+  <form  method="post" action="/topics/<%= topicInfo._id %>" >
+    <label for="topic-input">  Topic Name </label>
+    <input id="topic-input" name="topicName" type="text" value="<%= topicInfo.topic %>">
+    <br>
+
+
+    <label for="description-input"> Description </label>
+    <textarea id="description-input " name="topicDesc" > <%= topicInfo.description %> </textarea>
+    <br>
+
+
+    <button> Update Topic </button>
+  </form>
+
 </div>

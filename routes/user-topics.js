@@ -75,30 +75,80 @@ router.get('/topics/:topicId/delete', (req, res, next) => {
   );
 });
 
-// router.post('/topics/:topicId', (req, res, next) => {
-//   TopicModel.findById(
-//     req.params.prodId,
-//
-//     (err, topicFromDb) => {
-//       if(err){
-//         next(err);
-//         return;
-//       }
-//
-//       topicFromDb.name = req.body.topicName;
-//       topicFromDb.description = req.body.topicDescription;
-//
-//       topicFromDb.save((err) => {
-//         if(err) {
-//           next(err);
-//           return;
-//         }
-//
-//         res.redirect('/user-topics');
-//       });
-//     }
-//   );
-// });
+router.get('/topics/:topicId/edit', (req, res, next) => {
+    if (req.user === undefined) {
+        // req.flash('securityError', 'Log in to edit your rooms.');
+        res.redirect('/user-topics');
+        return;
+    }
+
+  TopicModel.findById(
+    req.params.topicId,
+
+    (err, topicFromDb) => {
+      if(err) {
+        next(err);
+        return;
+      }
+
+      //redirect if you don't own this room
+      // console.log(req.user);
+      // if (topicFromDb.owner.toString() !== req.user._id.toString()) {
+      //   // req.flash('securityError', 'You can only eit your rooms.');
+      //   res.redirect('/topics');
+      //   return;
+      // }
+      res.locals.topicInfo = topicFromDb;
+
+      res.render('active-user-view/topic-edit.ejs');
+    }
+
+  ); //close TopicModel.findById( ...)
+}); // close GET /rooms/:topicId/edit
+
+router.post('/topics/:topicId',
+
+
+(req, res, next) => {
+
+
+  TopicModel.findById(
+    req.params.topicId,
+
+    (err, topicFromDb) => {
+      if (err) {
+        next(err);
+        return;
+      }
+
+      console.log('the desc' + req.body.topicDesc);
+      // if (topicFromDb.owner.toString() !== req.user._id.toString()) {
+      //   // req.flash('securityError', 'You can only eit your rooms.');
+      //   res.redirect('/user-topics');
+      //   return;
+      // }
+      // "req.file" will be undefined if the user doesn't upload anythig
+
+      // update "photoUrl" only if the user
+      topicFromDb.topic = req.body.topicName;
+      topicFromDb.description = req.body.topicDesc;
+
+      console.log(req.body);
+
+
+      topicFromDb.save((err) => {
+        if(err) {
+          next(err);
+          return;
+        }
+
+        // req.flash('updateSuccess', 'Room update Succesful.');
+        res.redirect('/user-topics');
+      }); // close roomFromDb.save((err)...)
+    }
+  ); // close RoomModel.findById
+}); // close POST /rooms/:roomId
+
 
 
 

@@ -10,7 +10,7 @@ const topicSchema = new Schema(
       },
        description: {
          type: String,
-         required: true
+         required: [true, 'Please provide the topic description']
        },
        steps: {
          type: String,

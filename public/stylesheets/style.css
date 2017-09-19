@@ -1,11 +1,13 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  /*font: 14px sans-serif, "Lucida Grande", Helvetica, Arial ;*/
   background-image: url(../images/homepage-background-2.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
-  color: white;
-  font-weight: bold;
+  color: #FFEAD0;
+  /*font-weight: bold;*/
+  font-family: 'Sintony', sans-serif;
+
 
 }
 
@@ -16,16 +18,43 @@ a {
 
 }
 
+h2 {
+  text-align: center;
+}
+
+.navigation {
+  background-color: #0A3773;
+  margin-left: -4%;
+  margin-right: -4%;
+  margin-top: -6%;
+  padding: 5%;
+}
+
+.topic-link {
+  display: inline;
+}
+
 .topics {
-  background-color:rgba(10, 55, 115, .5);
+  background-color: rgba(91, 192, 190, 0.8);
   margin: 5% auto;
   padding: 2%;
-  width: 80%;
+  width: 100%;
 }
 
 .topic-list {
   list-style: none;
+    background-color:  rgba(216, 202, 199, 0.5);
+    margin-left: -6%;
+    margin-bottom: 5%;
+    padding: 2%;
+
 }
+
+.oneTopic {
+  color: #FFEAD0;
+  font-size: 30px;
+}
+
 
 .home {
   float: right;
@@ -52,12 +81,29 @@ a {
 
 .logout {
   float: right;
+  font-size: 30px;
+
 }
 
 .create {
   float: right;
-
 }
+
+.new {
+  border-radius: 50px;
+}
+
+.search {
+  float: right;
+  margin: -1% 20%;
+}
+
+.input {
+  margin-left: 38%;
+  width: 50%;
+  color: #1C2541;
+}
+
 
 footer {
   text-align: center;

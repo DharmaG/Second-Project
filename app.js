@@ -68,6 +68,9 @@ app.use(myTopics);
 const userTopics = require('./routes/user-topics.js');
 app.use(userTopics);
 
+const topicVariations = require('./routes/topic-variations.js');
+app.use(topicVariations);
+
 // ---------------------routes go here -------------------------
 
 // catch 404 and forward to error handler

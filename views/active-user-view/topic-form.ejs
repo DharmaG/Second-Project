@@ -1,15 +1,18 @@
-<h2> Add a new Topic </h2>
 
-<form class="form-inline" action="/topics" method="post">
+<div class="signup">
+  <h2> Add a new Topic </h2>
 
-    <label for="topic-input"> Topic Name </label>
-    <input id="topic-input" name="topicName" type="text">
-    <br>
+  <form class="form-inline" action="/topics" method="post">
 
-    <label for="description-input"> Description </label>
-    <textarea  id="description-input" name="topicDescription" ></textarea>
-    <br>
+      <label for="topic-input"> Topic Name </label>
+      <input class="input" id="topic-input" name="topicName" type="text">
+      <br>
 
-  <button> Save this topic </button>
+      <label for="description-input"> Description </label>
+      <textarea  id="description-input" name="topicDescription" ></textarea>
+      <br>
 
-</form>
+    <button class="btn btn-default"> Save this topic </button>
+
+  </form>
+</div>

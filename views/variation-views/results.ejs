@@ -1,6 +1,6 @@
 
 <div class="navigation">
-    <a class="topic-link" href="/user-topics"> My topics </a>
+    <a href="/user-topics"> My topics </a>
 
     <form class="form-horizontal search" method="get" action="/topic/search-results" >
       <div class="form-group form-group-lg">
@@ -15,11 +15,22 @@
 </div>
 
 <div class="topic-box">
-  <div class="topics">
-    <h2> Topic Information </h2>
 
-    <h3> <%= topicInfo.description %> </h3>
+  <h2> Topic search </h2>
 
-    <h3> <%= topicInfo.steps %> </h3>
-  </div>
+
+  <p> Topic search <strong> <%= lastSearch %> </strong></p>
+  <p> <%= listOfTopics.length %> results </p>
+
+  <ul>
+    <% listOfTopics.forEach((oneTopic) => { %>
+      <li class="topic-list">
+        <h3> <%= oneTopic.topic %> </h3>
+        <p> Description: <%= oneTopic.description %> </p>
+
+        <a href="/topics/<%= oneTopic._id %>"> Learn More</a>
+      </li>
+    <%  });  %>
+  </ul>
+
 </div>
