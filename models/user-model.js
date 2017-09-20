@@ -21,7 +21,7 @@ const userSchema = new Schema(
          enum: ['normal', 'admin'],
          default: 'normal'
        }
-    },
+    }
 
 );
 
