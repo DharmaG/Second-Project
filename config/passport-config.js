@@ -1,11 +1,14 @@
 const passport = require('passport');
 const UserModel = require('../models/user-model.js');
 
+// what gets saved when you are logged in
 passport.serializeUser((userFromDb, done) => {
   done(null, userFromDb._id);
 
 });
 
+
+//tells passport how to get the user's information
 passport.deserializeUser((idFromDb, done) => {
   UserModel.findById(
     idFromDb,

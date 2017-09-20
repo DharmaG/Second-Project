@@ -53,7 +53,13 @@ router.post('/process-signup', (req, res, next) => {
           next(err);
           return;
         }
-        res.redirect('/');
+
+        passport.authenticate('local', {
+          successRedirect: '/user-topics',
+          failureRedirect: '/signup',
+        })
+
+        res.redirect('/user-topics');
       });
 
     }
@@ -81,7 +87,7 @@ router.post('/process-login',
 router.get('/logout', (req, res, next) => {
   req.logout();
 
-  res.redirect('/signup');
+  res.redirect('/');
 });
 
 

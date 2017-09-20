@@ -14,7 +14,13 @@ const userSchema = new Schema(
          required: true
        },
 
-       encryptedPassword: { type: String }
+       encryptedPassword: { type: String },
+
+       role: {
+         type: String,
+         enum: ['normal', 'admin'],
+         default: 'normal'
+       }
     },
 
 );

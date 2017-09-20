@@ -1,18 +1,4 @@
 
-<div class="navigation">
-    <a href="/user-topics"> My topics </a>
-
-    <form class="form-horizontal search" method="get" action="/topic/search-results" >
-      <div class="form-group form-group-lg">
-        <label for="term-input"> </label>
-        <input  class="col-sm-2 control-label input" id="term-input" name="searchTerm" type="search" >
-          <button class="btn btn-default glyphicon glyphicon-search new"> </button>
-
-  <div class="logout">
-      <a class=" glyphicon glyphicon-log-out log-out" href="/logout"> </a>
-  </div>
-
-</div>
 
 <div class="topic-box">
 
@@ -25,6 +11,7 @@
   <ul>
     <% listOfTopics.forEach((oneTopic) => { %>
       <li class="topic-list">
+          <img class="photo" src="<%= oneTopic.imageUrl %>" width="150px" height="150px">
         <h3> <%= oneTopic.topic %> </h3>
         <p> Description: <%= oneTopic.description %> </p>
 

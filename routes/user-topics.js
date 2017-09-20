@@ -7,7 +7,7 @@ const router  = express.Router();
 
 const myUploader = multer(
   {
-    dest: __dirname + '/../public/uploads'
+    dest: __dirname + '/../public/uploads/'
   }
 );
 
@@ -35,7 +35,8 @@ router.post('/topics', myUploader.single('topicPhoto'),
   const theTopic = new TopicModel({
     topic:         req.body.topicName,
     imageUrl:      '/uploads/' + req.file.filename,
-    description:   req.body.topicDescription
+    description:   req.body.topicDescription,
+    steps:         req.body.topicSteps
   });
 
   theTopic.save((err) => {
@@ -45,6 +46,8 @@ router.post('/topics', myUploader.single('topicPhoto'),
       res.render('active-user-view/topic-form.ejs');
       return;
     }
+
+    console.log('ERROR');
 
     if (err && theTopic.errors) {
       next(err);
@@ -70,6 +73,9 @@ router.get('/topics/:topicId', (req, res, next) => {
     }
   );
 });
+
+
+
 
 router.get('/topics/:topicId/delete', (req, res, next) => {
   TopicModel.findByIdAndRemove(

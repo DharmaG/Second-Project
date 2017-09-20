@@ -1,7 +1,7 @@
-<a class="btn btn-default glyphicon glyphicon-home" href="/"> </a>
+<a class="btn btn-primary btn-md fa fa-sign-in glyphicon glyphicon-home" href="/"> </a>
 
 
-<div class="signup">
+<!-- <div class="signup">
 
   <h2> Sign Up </h2>
 
@@ -35,4 +35,31 @@
 
   </form>
 
+</div> -->
+
+<form class="form-horizontal logsign" method="post" action="process-signup" >
+<div class="container">
+  <div class="row">
+      <div class="col-md-offset-5 col-md-3">
+          <div class="form-login">
+          <h4>Sign Up</h4>
+          <input type="text" id="userName" class="form-control input-sm chat-input" name="signupName" placeholder="name" />
+          </br>
+          <input type="text" id="userName" class="form-control input-sm chat-input" name="signupEmail" placeholder="username" />
+          </br>
+          <input type="text" id="userPassword" class="form-control input-sm chat-input" name="signupPassword" placeholder="password" />
+          </br>
+          <div class="wrapper">
+          <span class="group-btn">
+            <button class="btn btn-primary btn-md fa fa-sign-in" > Sign Up </button>
+            <a class="btn btn-primary btn-md fa fa-sign-in" href="/login" > Log In </a>
+              <!-- <a href="/user-topics" class="btn btn-primary btn-md">login <i class="fa fa-sign-in"></i></a> -->
+          </span>
+          </div>
+          </div>
+
+      </div>
+  </div>
 </div>
+
+</form>
