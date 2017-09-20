@@ -1,33 +1,68 @@
 <body class="user-body">
-    <a class="topic-link btn btn-default" href="/user-topics"> My topics </a>
+<a class="topic-link" href="/user-topics"> My topics </a>
 
 
 <div class="signup">
-  <h2> Add a new Topic </h2>
+  <h3> Add a new Topic </h3>
 
   <form class="form-inline" action="/topics" method="post" enctype="multipart/form-data">
 
 
 
-      <label for="topic-input"> Topic Name </label>
-      <input class="input" id="topic-input" name="topicName" type="text">
+
+  <input class="form-control input-sm chat-input topicName" id="topic-input" name="topicName" type="text" placeholder="TOPIC NAME">
+
+  <input id="image-input" class="upload" name="topicPhoto" type="file">
+
+      <br>
       <br>
 
-      <label for="image-input"> Upload Image </label>
-      <input id="image-input" name="topicPhoto" type="file">
+
+      <textarea class="textarea" id="description-input" name="topicDescription" placeholder="DESCRIPTION"></textarea>
       <br>
 
-      <label for="description-input"> Description </label>
-      <textarea  id="description-input" name="topicDescription" ></textarea>
-      <br>
 
-      <label for="steps-input"> Steps </label>
-      <textarea  id="steps-input" name="topicSteps" ></textarea>
+      <textarea class="textarea" id="steps-input" name="topicSteps" ></textarea>
       <br>
 
     <button class="btn btn-default"> Save this topic </button>
 
   </form>
+</div>
+
+<!-- <form class="form-horizontal form" method="post" action="/topics" enctype="multipart/form-data" >
+<div class="container">
+  <div class="row">
+      <div class="col-md-offset-5 col-md-3">
+          <div class="form-login">
+          <h4> Add a new Topic </h4>
+
+          <input type="text" id="topicName" class="form-control input-sm chat-input" name="loginEmail" placeholder="TOPIC NAME" />
+
+                <input id="image-input" name="topicPhoto" type="file">
+
+          </br><br>
+
+            <textarea class="input" id="description-input" name="topicDescription" placeholder="DESCRIPTION" ></textarea>
+
+            <br><br>
+                  <textarea class="input" id="steps-input" name="topicSteps" ></textarea>
+          </br>
+          <div class="wrapper">
+          <span class="group-btn">
+            <button class="btn btn-primary btn-lg fa fa-sign-in" > Save </button>
+              <!-- <a href="/user-topics" class="btn btn-primary btn-md">login <i class="fa fa-sign-in"></i></a> -->
+          </span>
+          </div>
+          </div>
+
+      </div>
+  </div>
+</div> 
+
+
+</form>
+
 </div>
 
 </body>

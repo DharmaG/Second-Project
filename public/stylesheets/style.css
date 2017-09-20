@@ -21,6 +21,7 @@ body {
   margin-top: 15%;
 }
 
+
 .user-body {
   background-color: rgb(10, 55, 115);
 }
@@ -47,6 +48,9 @@ h2 {
 
 .topic-link {
   display: inline;
+  font-size: 21px;
+  float: right;
+  margin: -5% 14%;
 }
 
 .modifiers {
@@ -57,8 +61,10 @@ h2 {
 .topics {
   background-color: rgba(91, 192, 190, 0.8);
   margin: 5% auto;
-  padding: 2%;
+  padding: 5%;
   width: 100%;
+  margin-bottom: 5%;
+
 }
 
 .topic-list {
@@ -91,17 +97,40 @@ h2 {
   font-size: 30px;
 }
 
+/*--------CREATE AND ADD TOPICS-----------*/
 .signup {
   text-align: center;
   border-radius: 10px;
   background-color: rgba(10, 55, 115, .5);
-  margin: 15% 35%;
-  padding: 5%;
+  margin: 7% 15%;
+  padding: 10%;
+  width: 68%;
 }
+
+.topicName{
+  margin-left: -33%;
+
+}
+
+.upload {
+  display: inline;
+  margin-left: 53%;
+  margin-top: -5%;
+}
+
+h3 {
+  margin-bottom: 3%;
+}
+
+.textarea {
+  width: 101%;
+  color: black;
+}
+/*--------CREATE AND ADD TOPICS-----------*/
 
 .logout {
   float: right;
-  margin: -2% -40%;
+    margin: -4% 30%;
   font-size: 57px;
 
 }
@@ -109,7 +138,11 @@ h2 {
 .create {
   border: 3px solid;
   border-radius: 50%;
-  padding: 2px;
+  padding: 5px;
+  float: right;
+  margin-top: -5%;
+  margin-right: -4%;
+  font-size: 25px;
 }
 
 
@@ -172,7 +205,30 @@ h2 {
   float:left;
   margin: 0 auto;
   margin-right: 2%;
+  margin-bottom: 5%;
 }
+
+/* --------------------TOPIC STEPS------------------*/
+
+.photoTopic {
+  float: left;
+  margin-top: -1%;
+  margin-right: 1%;
+}
+
+.descriptionTopic {
+  margin-top: 5%;
+}
+
+/* --------------------TOPIC STEPS------------------*/
+
+.fixedSearch {
+  margin-right: none;
+}
+
+
+
+
 
 
 footer {

@@ -1,35 +1,24 @@
 <body class="user-body">
 
-
-<div class="navigation">
-    <a class="topic-link" href="/user-topics"> My topics </a>
-
-    <form class="form-horizontal search" method="get" action="/topic/search-results" >
-      <div class="form-group form-group-lg">
-        <label for="term-input"> </label>
-        <input  class="col-sm-2 control-label search-input" id="term-input" name="searchTerm" type="search" >
-          <button class="btn btn-default glyphicon glyphicon-search new"> </button>
-
-  <div class="logout">
-      <a class=" glyphicon glyphicon-log-out log-out" href="/logout"> </a>
-  </div>
-
-</div>
-
+<a class="topic-link" href="/user-topics"> My topics </a>
 
 
 <div class="topic-box">
   <div class="topics">
     <div >
-      <h2> Topic Information </h2>
 
-      <h3> <%= topicInfo.description %> </h3>
+        <img class="photoTopic" src="<%= topicInfo.imageUrl %>" width="60px" height="60px">
+
+      <h2> <%= topicInfo.topic %> </h2>
+
+      <h3 class="descriptionTopic"> <%= topicInfo.description %> </h3>
 
       <h3> <%= topicInfo.steps %> </h3>
     </div>
   </div>
 
 </div>
+
 
 
 </body>

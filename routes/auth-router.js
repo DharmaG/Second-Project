@@ -54,12 +54,14 @@ router.post('/process-signup', (req, res, next) => {
           return;
         }
 
-        passport.authenticate('local', {
-          successRedirect: '/user-topics',
-          failureRedirect: '/signup',
-        })
+        req.login(theUser, (err) => {
+          if (err) {
+            next(err);
+            return;
+          }
 
-        res.redirect('/user-topics');
+          res.redirect('/user-topics');
+        });
       });
 
     }
