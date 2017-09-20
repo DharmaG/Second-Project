@@ -20,7 +20,7 @@ const topicSchema = new Schema(
          type: String,
        }
 
-    },
+    }
 
 );
 
