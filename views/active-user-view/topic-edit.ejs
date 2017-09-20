@@ -1,25 +1,33 @@
 <body class="user-body">
 
-<div class="navigation">
-    <a class="topic-link" href="/user-topics"> My topics </a>
+  <div class="navigation">
+      <a class="topic-link" href="/user-topics"> My topics </a>
 
-    <form class="form-horizontal search" method="get" action="/topic/search-results" >
-      <div class="form-group form-group-lg">
-        <label for="term-input"> </label>
-        <input  class="col-sm-2 control-label input" id="term-input" name="searchTerm" type="search" >
-          <button class="btn btn-default glyphicon glyphicon-search new"> </button>
+      <form class="form-horizontal search" method="get" action="/topic/search-results" >
+        <div class="form-group form-group-lg">
+          <label for="term-input"> </label>
+          <input  class="col-sm-2 control-label search-input" id="term-input" name="searchTerm" type="search" >
+            <button class="btn btn-default glyphicon glyphicon-search new"> </button>
 
-  <div class="logout">
-      <a class=" glyphicon glyphicon-log-out log-out" href="/logout"> </a>
+    <div class="logout">
+        <a class=" glyphicon glyphicon-log-out log-out" href="/logout"> </a>
+    </div>
+
   </div>
 
 </div>
 
-
   <div class="signup">
     <h2> Edit Topic </h2>
 
-    <form  class="form-inline" method="post" action="/topics/<%= topicInfo._id %>" >
+
+
+    <form  class="form-inline" method="post" action="/topics/<%= topicInfo._id %>" enctype="multipart/form-data">
+
+      <label for="image-input"> Image URL (optional) </label>
+      <input id="image-input" name="topicImageUrl" type="file" value="<%= topicInfo.imageUrl%>">
+      <br>
+
       <label for="topic-input">  Topic Name </label>
       <input class="input" id="topic-input" name="topicName" type="text" value="<%= topicInfo.topic %>">
       <br>
@@ -30,7 +38,7 @@
       <br>
 
 
-      <button> Update Topic </button>
+      <button class="btn btn-default"> Update Topic </button>
     </form>
   </div>
 </body>

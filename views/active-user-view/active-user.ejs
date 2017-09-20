@@ -6,7 +6,7 @@
     <form class="form-horizontal search" method="get" action="/topic/search-results" >
       <div class="form-group form-group-lg">
         <label for="term-input"> </label>
-        <input  class="col-sm-2 control-label input" id="term-input" name="searchTerm" type="search" >
+        <input  class="col-sm-2 control-label search-input" id="term-input" name="searchTerm" type="search" >
           <button class="btn btn-default glyphicon glyphicon-search new"> </button>
 
   <div class="logout">
@@ -38,6 +38,7 @@
 
     <%  listOfTopics.forEach((oneTopic) => {  %>
         <li class="topic-list">
+          <img src="<%= oneTopic.imageUrl %>">
           <a  class="oneTopic" href="/topics/<%= oneTopic._id %>"> <%= oneTopic.topic %> </a>
           <p> <%= oneTopic.description %> </p>
           <a class="glyphicon glyphicon-trash" href="/topics/<%= oneTopic._id %>/delete"> </a>

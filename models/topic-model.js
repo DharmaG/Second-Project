@@ -8,6 +8,10 @@ const topicSchema = new Schema(
         type: String,
         required: [true, 'Please provide the topic name']
       },
+      imageUrl: {
+        type: String,
+        required: [true, 'Your Topic needs an image']
+      },
        description: {
          type: String,
          required: [true, 'Please provide the topic description']

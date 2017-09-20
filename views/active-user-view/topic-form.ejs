@@ -5,7 +5,11 @@
 <div class="signup">
   <h2> Add a new Topic </h2>
 
-  <form class="form-inline" action="/topics" method="post">
+  <form class="form-inline" action="/topics" method="post" enctype="multipart/form-data">
+
+    <label for="image-input"> Upload Image URL </label>
+    <input id="image-input" name="topicImageUrl" type="file">
+    <br>
 
       <label for="topic-input"> Topic Name </label>
       <input class="input" id="topic-input" name="topicName" type="text">

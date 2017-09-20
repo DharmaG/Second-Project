@@ -92,7 +92,6 @@ h2 {
 
 }
 
-
 .create {
   border: 3px solid;
   border-radius: 50%;
@@ -104,7 +103,14 @@ h2 {
   margin: -1% 20%;
 }
 
+.search-input {
+  margin-left: 38%;
+  width: 50%;
+  color: #1C2541;
+}
+
 .input {
+  border-style: solid;
   margin-left: 38%;
   width: 50%;
   color: #1C2541;

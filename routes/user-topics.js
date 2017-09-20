@@ -1,8 +1,15 @@
 const express = require('express');
+const multer = require('multer');
 
 const TopicModel = require('../models/topic-model.js');
 
 const router  = express.Router();
+
+const myUploader = multer(
+  {
+    dest: __dirname + '/../public/uploads'
+  }
+);
 
 
 router.get('/user-topics', (req, res, next) => {
@@ -21,10 +28,13 @@ router.get('/topics/new', (req, res, next) => {
   res.render('active-user-view/topic-form.ejs');
 });
 
-router.post('/topics', (req, res, next) => {
+router.post('/topics', myUploader.single('topicPhoto'),
+
+(req, res, next) => {
 
   const theTopic = new TopicModel({
     topic:         req.body.topicName,
+    imageUrl:      '/uploads/' + req.file.filename,
     description:   req.body.topicDescription
   });
 
@@ -108,6 +118,8 @@ router.get('/topics/:topicId/edit', (req, res, next) => {
 
 router.post('/topics/:topicId',
 
+myUploader.single('topicPhoto'),
+
 
 (req, res, next) => {
 
@@ -131,10 +143,14 @@ router.post('/topics/:topicId',
 
       // update "photoUrl" only if the user
       topicFromDb.topic = req.body.topicName;
+      // topicFromDb.topic = req.body.topicImageUrl;
       topicFromDb.description = req.body.topicDesc;
 
       console.log(req.body);
 
+      if(req.file) {
+        topicFromDb.photoUrl = '/uploads/' + req.file.filename;
+      }
 
       topicFromDb.save((err) => {
         if(err) {
