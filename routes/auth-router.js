@@ -11,6 +11,7 @@ router.get('/signup', (req, res, next) => {
     res.redirect('/');
     return;
   }
+  res.locals.bodyClass = 'home-body';
   res.render('auth-views/signup-form.ejs');
 });
 
@@ -75,6 +76,7 @@ router.get('/login', (req, res, next) => {
     return;
   }
 
+res.locals.bodyClass = 'home-body';
 res.render('auth-views/login-form.ejs');
 
 });

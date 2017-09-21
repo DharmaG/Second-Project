@@ -1,13 +1,23 @@
 body {
   padding: 50px;
   /*font: 14px sans-serif, "Lucida Grande", Helvetica, Arial ;*/
+  /*font-weight: bold;*/
+  font-family: sans-serif;
+  font-size: 20px;
+  color: rgb(35, 71, 113);
+  background-color: #EBEBEB;
+
+}
+
+.home-body {
   background-image: url(../images/homepage-background-2.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
-  color: #FFEAD0;
-  /*font-weight: bold;*/
-  font-family: 'Sintony', sans-serif;
+  background-color: rgb(10, 55, 115);
+}
 
+.big, h2 {
+  font-family: 'Lobster Two', cursive;
 
 }
 
@@ -22,28 +32,40 @@ body {
 }
 
 
-.user-body {
-  background-color: rgb(10, 55, 115);
-}
-
 a {
-  color: #6472A1;
+  color: rgb(10, 55, 115);
   text-decoration: none;
   display: inline;
 
 }
 
+a:hover {
+  color: #EBEBEB;
+  text-decoration: none;
+}
+
 h2 {
   margin-top: 3%;
+  font-size: 67px;
+  margin-bottom: 4%;
+
 }
 
 
 .navigation {
-  background-color: #0A3773;
+  background-color: rgba(10, 55, 115, .5);
   margin-left: -4%;
   margin-right: -4%;
-  margin-top: -6%;
-  padding: 5%;
+  margin-top: -4%;
+  padding: 3%;
+
+  box-shadow: 0 0 20px 0px rgb(47, 47, 47),
+              0 0 20px 0px rgba(107, 104, 104, 0);
+}
+
+.topic {
+
+  font-size: 70px;
 }
 
 .topic-link {
@@ -54,12 +76,12 @@ h2 {
 }
 
 .modifiers {
-  float: right;
-  margin-top: -12%;
+  position: absolute;
+  top: 32px;
+  right:38px;
 }
 
 .topics {
-  background-color: rgba(91, 192, 190, 0.8);
   margin: 5% auto;
   padding: 5%;
   width: 100%;
@@ -69,28 +91,31 @@ h2 {
 
 .topic-list {
   list-style: none;
-    background-color:  rgba(216, 202, 199, 0.5);
-    margin-left: -4%;
-    margin-bottom: 5%;
-    padding: 2%;
+  background-color: rgba(10, 55, 115, .5);
+  margin-left: -4%;
+  margin-bottom: 5%;
+  padding: 8% 3%;
+  border-radius: 10px;
+  position: relative;
 
 }
 
 .oneTopic {
-  color: #FFEAD0;
   font-size: 30px;
 }
 
 
 .home {
   margin: 5%;
-  margin-left: 43%;
+  margin-left: 40%;
 }
 
 .title {
-  margin-top: 15%;
+  margin-top: 10%;
   text-align: center;
-  font-size: 80px;
+  font-size: 100px;
+  font-family: 'Courgette', cursive;
+  color: #fff;
 }
 
 .description {
@@ -128,20 +153,13 @@ h3 {
 }
 /*--------CREATE AND ADD TOPICS-----------*/
 
-.logout {
-  float: right;
-    margin: -4% 30%;
-  font-size: 57px;
-
-}
-
 .create {
   border: 3px solid;
   border-radius: 50%;
   padding: 5px;
   float: right;
-  margin-top: -5%;
-  margin-right: -4%;
+  margin-top: -8%;
+  margin-right: 1%;
   font-size: 25px;
 }
 
@@ -150,7 +168,23 @@ h3 {
 
 .search {
   float: right;
-  margin: -1% -30%;
+  margin: 1%;
+  width: 600px;
+}
+
+.search > .container {
+  width: 80%;
+  display: inline-block;
+}
+
+.search > .logout {
+  font-size: 57px;
+  display: inline-block;
+      margin-left: 7%;
+}
+
+.fixedSearch {
+  margin-right: none;
 }
 
 .search-input {
@@ -192,39 +226,37 @@ h3 {
 }
 
 
-/*--------------SEARCH--------------------------*/
+/*--------------/SEARCH--------------------------*/
 
 .input {
   border-style: solid;
   margin-left: 38%;
   width: 50%;
-  color: #1C2541;
+  color: rgb(10, 55, 115);
+  font-size: 20px;
 }
 
 .photo {
   float:left;
   margin: 0 auto;
   margin-right: 2%;
-  margin-bottom: 5%;
+  margin-bottom: 9%;
+  margin-top: -3%;
+  border-radius: 100%;
 }
 
 /* --------------------TOPIC STEPS------------------*/
 
 .photoTopic {
-  float: left;
-  margin-top: -1%;
-  margin-right: 1%;
+  margin-top: -10%;
+  border-radius: 100px;
 }
 
 .descriptionTopic {
   margin-top: 5%;
 }
 
-/* --------------------TOPIC STEPS------------------*/
-
-.fixedSearch {
-  margin-right: none;
-}
+/* --------------------/TOPIC STEPS------------------*/
 
 
 

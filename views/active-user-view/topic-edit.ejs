@@ -1,36 +1,12 @@
 <body class="user-body">
 
-<a class="topic-link" href="/user-topics"> My topics </a>
 
   <div class="signup">
-    <!-- <h2> Edit Topic </h2>
-
-
-
-    <form  class="form-inline" method="post" action="/topics/<%= topicInfo._id %>" enctype="multipart/form-data">
-
-      <label for="image-input"> Image URL (optional) </label>
-      <input id="image-input" name="topicPhoto" type="file" value="<%= topicInfo.imageUrl%>">
-      <br>
-
-      <label for="topic-input">  Topic Name </label>
-      <input class="input" id="topic-input" name="topicName" type="text" value="<%= topicInfo.topic %>">
-      <br>
-
-      <label class="form-group" for="description-input"> Description </label>
-      <textarea class="form-control input" id="description-input " name="topicDesc" > <%= topicInfo.description %> </textarea>
-      <br>
-
-      <label for="steps-input"> Steps </label>
-      <textarea class="input" id="steps-input" name="topicSteps" ></textarea>
-      <br>
-
-      <button class="btn btn-default"> Update Topic </button> -->
 
 
 
 
-      <h3> Edit Topic </h3>
+      <h2> Edit Topic </h2>
 
       <form class="form-inline" action="/topics/<%= topicInfo._id %>" method="post" enctype="multipart/form-data">
 
@@ -45,11 +21,11 @@
           <br>
 
 
-          <textarea class="textarea" id="description-input" name="topicDescription"> <%= topicInfo.description %> </textarea>
+          <textarea class="textarea" id="description-input" name="topicDescription" rows="3"> <%= topicInfo.description %> </textarea>
           <br>
 
 
-          <textarea class="textarea" id="steps-input" name="topicSteps" > <%= topicInfo.steps %></textarea>
+          <textarea class="textarea" id="steps-input" name="topicSteps" rows="5" > <%= topicInfo.steps %></textarea>
           <br>
 
         <button class="btn btn-default"> Save this topic </button>

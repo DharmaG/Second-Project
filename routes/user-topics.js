@@ -150,12 +150,13 @@ myUploader.single('topicPhoto'),
       // update "photoUrl" only if the user
       topicFromDb.topic = req.body.topicName;
       // topicFromDb.topic = req.body.topicImageUrl;
-      topicFromDb.description = req.body.topicDesc;
+      topicFromDb.description = req.body.topicDescription;
+      topicFromDb.steps = req.body.topicSteps;
 
       console.log(req.body);
 
       if(req.file) {
-        topicFromDb.photoUrl = '/uploads/' + req.file.filename;
+        topicFromDb.imageUrl = '/uploads/' + req.file.filename;
       }
 
       topicFromDb.save((err) => {

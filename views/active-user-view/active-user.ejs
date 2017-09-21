@@ -2,17 +2,17 @@
 
 
 
-<div class="background-color">
+
   <% if (currentUser) { %>
   <h2> Welcome, <%= currentUser.name %>! </h2>
   <% }  %>
 
-  <div class="topics">
+
 
 
       <a class="glyphicon glyphicon-plus create" href="/topics/new"> </a>
 
-  <div >
+
 
 
     <ul>
@@ -23,16 +23,17 @@
 
     <%  listOfTopics.forEach((oneTopic) => {  %>
       <div class="topic-list">
+        <div class="modifiers">
+          <a class="glyphicon glyphicon-trash" href="/topics/<%= oneTopic._id %>/delete"> </a>
+          <a  href="/topics/<%= oneTopic._id %>/edit"> Edit </a>
+          <br>
+          <br>
+        </div>
+        
         <li>
           <img class="photo" src="<%= oneTopic.imageUrl %>" width="150px" height="150px">
-          <a  class="oneTopic" href="/topics/<%= oneTopic._id %>"> <%= oneTopic.topic %> </a>
+          <a  class="oneTopic big" href="/topics/<%= oneTopic._id %>"> <%= oneTopic.topic %> </a>
           <p> <%= oneTopic.description %> </p>
-          <div class="modifiers">
-            <a class="glyphicon glyphicon-trash" href="/topics/<%= oneTopic._id %>/delete"> </a>
-            <a  href="/topics/<%= oneTopic._id %>/edit"> Edit </a>
-            <br>
-            <br>
-          </div>
 
         </li>
       </div>
@@ -50,7 +51,7 @@
 
 
     </form>
-  </div>
+
 
 </div>
 </body>

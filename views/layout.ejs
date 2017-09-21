@@ -3,14 +3,16 @@
   <head>
     <meta charset="utf-8">
     <title><%= title %></title>
-
+    <link href="https://fonts.googleapis.com/css?family=Lobster+Two" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lemon" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Sintony" rel="stylesheet">
 <!-- bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <link rel="stylesheet" href="/stylesheets/style.css">
   </head>
-  <body>
+  <body class="<%= bodyClass %>">
 <header>
 
 <nav>
@@ -28,10 +30,12 @@
           <input  class="col-sm-2 control-label search-input" id="term-input" name="searchTerm" type="search" >
             <button class="btn btn-default glyphicon glyphicon-search new"> </button> -->
 
+            <a class="topic big" href="/user-topics"> PACE </a>
+
         <form class="form-horizontal search" method="get" action="/topic/search-results" >
             <div class="container">
               <div class="row fixedSearch">
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                         <div id="custom-search-input">
                             <div class="input-group col-md-12">
                                 <input type="text" class="form-control input-small" name="searchTerm" placeholder="Search" />
@@ -45,7 +49,7 @@
                     </div>
               </div>
             </div>
-            <div class="logout">
+            <div class="logout big">
                 <a class=" glyphicon glyphicon-log-out log-out" href="/logout"> </a>
             </div>
           </form>
