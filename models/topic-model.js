@@ -16,7 +16,10 @@ const topicSchema = new Schema(
          required: [true, 'Please provide the topic description']
        },
        steps: {
-         type: String,
+         type: String
+       },
+       about: {
+         type: String
        }
 
     }

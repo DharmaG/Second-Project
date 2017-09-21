@@ -16,7 +16,14 @@ router.get('/topic/search-results', (req, res, next) => {
 
 
   TopicModel.find(
-    {topic: mySearchRegex},
+    {
+      $or:[
+      {topic: mySearchRegex},
+      {description: mySearchRegex},
+      {steps: mySearchRegex}
+      ]
+    },
+
     // |
     // field from schema to searchResults
     //(check the model)

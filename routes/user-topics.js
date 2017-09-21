@@ -24,6 +24,10 @@ router.get('/user-topics', (req, res, next) => {
 
 });
 
+router.get('/about', (req, res, next) => {
+  res.render('active-user-view/about.ejs');
+});
+
 router.get('/topics/new', (req, res, next) => {
   res.render('active-user-view/topic-form.ejs');
 });

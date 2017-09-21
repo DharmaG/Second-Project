@@ -7,10 +7,12 @@
   <h2> Welcome, <%= currentUser.name %>! </h2>
   <% }  %>
 
+<div class="rightSide">
+  <a class="about" href="/about"> About </a>
+<a class="glyphicon glyphicon-plus create" href="/topics/new"> </a>
+</div>
 
 
-
-      <a class="glyphicon glyphicon-plus create" href="/topics/new"> </a>
 
 
 
@@ -29,7 +31,7 @@
           <br>
           <br>
         </div>
-        
+
         <li>
           <img class="photo" src="<%= oneTopic.imageUrl %>" width="150px" height="150px">
           <a  class="oneTopic big" href="/topics/<%= oneTopic._id %>"> <%= oneTopic.topic %> </a>
@@ -45,7 +47,6 @@
 
     </ul>
   </div>
-
 
 
 
