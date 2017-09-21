@@ -29,6 +29,12 @@ body {
   text-align: center;
   margin-left: -12%;
   margin-top: 15%;
+    color: #EBEBEB;
+}
+
+.click {
+  background-color: #EBEBEB;
+  color: rgb(10, 55, 115);
 }
 
 
@@ -115,7 +121,7 @@ h2 {
   text-align: center;
   font-size: 100px;
   font-family: 'Courgette', cursive;
-  color: #fff;
+  color: #EBEBEB;
 }
 
 .description {
@@ -150,6 +156,8 @@ h3 {
 .textarea {
   width: 101%;
   color: black;
+  margin: 2%;
+  border-radius: 10px;
 }
 /*--------CREATE AND ADD TOPICS-----------*/
 
